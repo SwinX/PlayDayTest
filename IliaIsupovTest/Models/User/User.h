@@ -20,6 +20,9 @@
 
 @interface User (CoreDataGeneratedAccessors)
 
++(User*)currentUser;
++(void)setCurrentUser:(User*)user;
+
 - (void)addMessagesObject:(Message *)value;
 - (void)removeMessagesObject:(Message *)value;
 - (void)addMessages:(NSSet *)values;

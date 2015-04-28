@@ -18,6 +18,7 @@
 		BA6BB50E1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB50C1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld */; };
 		BA6BB51B1AEFDDAB002B6530 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5171AEFDDAB002B6530 /* Message.m */; };
 		BA6BB51C1AEFDDAB002B6530 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB51A1AEFDDAB002B6530 /* User.m */; };
+		BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB51F1AEFE33A002B6530 /* Conversation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		BA6BB5171AEFDDAB002B6530 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		BA6BB5191AEFDDAB002B6530 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BA6BB51A1AEFDDAB002B6530 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BA6BB51E1AEFE33A002B6530 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
+		BA6BB51F1AEFE33A002B6530 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,7 @@
 		BA6BB5061AEFD10A002B6530 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB51D1AEFE31D002B6530 /* Conversation */,
 				BA6BB5151AEFDDAB002B6530 /* Message */,
 				BA6BB5181AEFDDAB002B6530 /* User */,
 			);
@@ -193,6 +197,15 @@
 				BA6BB51A1AEFDDAB002B6530 /* User.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		BA6BB51D1AEFE31D002B6530 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB51E1AEFE33A002B6530 /* Conversation.h */,
+				BA6BB51F1AEFE33A002B6530 /* Conversation.m */,
+			);
+			path = Conversation;
 			sourceTree = "<group>";
 		};
 		D625569AA9619DE0B040C893 /* Pods */ = {
@@ -345,6 +358,7 @@
 				BA6BB51B1AEFDDAB002B6530 /* Message.m in Sources */,
 				BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
+				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
