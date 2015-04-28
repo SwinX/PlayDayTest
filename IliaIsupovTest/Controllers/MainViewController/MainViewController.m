@@ -8,6 +8,12 @@
 
 #import "MainViewController.h"
 
+NSString* const SelfSenderId = @"UserSenderId";
+NSString* const SelfDisplayName = @"User";
+
+NSString* const BotSenderId = @"BotSenderId";
+NSString* const BotDisplayName = @"BotDisplayName";
+
 @interface MainViewController ()
 
 @end
@@ -16,7 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.senderId = SelfSenderId;
+    self.senderDisplayName = SelfDisplayName;
 }
 
 - (void)didReceiveMemoryWarning {
