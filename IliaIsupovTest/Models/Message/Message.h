@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class NSManagedObject;
+@class User;
 
 @interface Message : NSManagedObject
 
@@ -18,6 +18,6 @@
 @property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSData * image;
-@property (nonatomic, retain) NSManagedObject *user;
+@property (nonatomic, retain) User *user;
 
 @end
