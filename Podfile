@@ -3,6 +3,8 @@
 
 target 'IliaIsupovTest' do
 
+  pod 'JSQMessagesViewController', '~> 7.0.1'
+
 end
 
 target 'IliaIsupovTestTests' do
