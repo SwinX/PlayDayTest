@@ -4,6 +4,7 @@
 target 'IliaIsupovTest' do
 
   pod 'JSQMessagesViewController', '~> 7.0.1'
+  pod 'MagicalRecord', '~> 2.2'
 
 end
 

@@ -2,12 +2,17 @@ PODS:
   - JSQMessagesViewController (7.0.1):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
 
 DEPENDENCIES:
   - JSQMessagesViewController (~> 7.0.1)
+  - MagicalRecord (~> 2.2)
 
 SPEC CHECKSUMS:
   JSQMessagesViewController: 03fba8a3021a3ddc1c91847f180ffe549f2e8cf2
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
 
 COCOAPODS: 0.36.4
