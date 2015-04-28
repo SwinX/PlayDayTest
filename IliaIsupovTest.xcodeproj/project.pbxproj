@@ -10,11 +10,11 @@
 		6860F5E79C62ABB76D9549E3 /* libPods-IliaIsupovTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322A01415E8E78A8B32ADE72 /* libPods-IliaIsupovTest.a */; };
 		BA6BB4E21AEFB77D002B6530 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB4E11AEFB77D002B6530 /* main.m */; };
 		BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB4E41AEFB77D002B6530 /* AppDelegate.m */; };
-		BA6BB4E81AEFB77D002B6530 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB4E71AEFB77D002B6530 /* ViewController.m */; };
 		BA6BB4EB1AEFB77D002B6530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB4E91AEFB77D002B6530 /* Main.storyboard */; };
 		BA6BB4ED1AEFB77D002B6530 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB4EC1AEFB77D002B6530 /* Images.xcassets */; };
 		BA6BB4F01AEFB77D002B6530 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA6BB4EE1AEFB77D002B6530 /* LaunchScreen.xib */; };
 		BA6BB4FC1AEFB77E002B6530 /* IliaIsupovTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB4FB1AEFB77E002B6530 /* IliaIsupovTestTests.m */; };
+		BA6BB50A1AEFD125002B6530 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5091AEFD125002B6530 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		BA6BB4E11AEFB77D002B6530 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA6BB4E31AEFB77D002B6530 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BA6BB4E41AEFB77D002B6530 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BA6BB4E61AEFB77D002B6530 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BA6BB4E71AEFB77D002B6530 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BA6BB4EA1AEFB77D002B6530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA6BB4EC1AEFB77D002B6530 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA6BB4EF1AEFB77D002B6530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BA6BB4F51AEFB77D002B6530 /* IliaIsupovTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IliaIsupovTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6BB4FA1AEFB77E002B6530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6BB4FB1AEFB77E002B6530 /* IliaIsupovTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IliaIsupovTestTests.m; sourceTree = "<group>"; };
+		BA6BB5081AEFD125002B6530 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BA6BB5091AEFD125002B6530 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +96,10 @@
 		BA6BB4DE1AEFB77D002B6530 /* IliaIsupovTest */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB5051AEFD10A002B6530 /* Controllers */,
+				BA6BB5061AEFD10A002B6530 /* Models */,
 				BA6BB4E31AEFB77D002B6530 /* AppDelegate.h */,
 				BA6BB4E41AEFB77D002B6530 /* AppDelegate.m */,
-				BA6BB4E61AEFB77D002B6530 /* ViewController.h */,
-				BA6BB4E71AEFB77D002B6530 /* ViewController.m */,
 				BA6BB4E91AEFB77D002B6530 /* Main.storyboard */,
 				BA6BB4EC1AEFB77D002B6530 /* Images.xcassets */,
 				BA6BB4EE1AEFB77D002B6530 /* LaunchScreen.xib */,
@@ -132,6 +132,30 @@
 				BA6BB4FA1AEFB77E002B6530 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA6BB5051AEFD10A002B6530 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB5071AEFD125002B6530 /* MainViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA6BB5061AEFD10A002B6530 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA6BB5071AEFD125002B6530 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB5081AEFD125002B6530 /* MainViewController.h */,
+				BA6BB5091AEFD125002B6530 /* MainViewController.m */,
+			);
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		D625569AA9619DE0B040C893 /* Pods */ = {
@@ -278,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6BB4E81AEFB77D002B6530 /* ViewController.m in Sources */,
+				BA6BB50A1AEFD125002B6530 /* MainViewController.m in Sources */,
 				BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 			);
