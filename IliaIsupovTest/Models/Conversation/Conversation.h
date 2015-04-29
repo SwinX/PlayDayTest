@@ -12,24 +12,25 @@
 @class User;
 @class Message;
 
-@protocol ConversationDelegate <NSObject>
+@protocol ConversationObserver <NSObject>
 
+@optional
 -(void)user:(User*)user didSendMessage:(Message*)message;
--(void)user:(User*)user failedToSendMessage:(Message*)message withError:(NSError*)error;
 
 @end
 
 @interface Conversation : NSObject
-
-@property (nonatomic, weak) id<ConversationDelegate> delegate;
 
 @property (nonatomic, readonly) NSArray* users;
 @property (nonatomic, readonly) NSArray* messages;
 
 -(instancetype)initWithUsers:(NSArray*)users;
 
--(Message*)sendText:(NSString*)text;
--(Message*)sendImage:(UIImage*)image;
--(Message*)sendLocation:(CLLocation*)location;
+-(Message*)sendText:(NSString*)text fromUser:(User*)user;
+-(Message*)sendImage:(UIImage*)image fromUser:(User*)user;
+-(Message*)sendLocation:(CLLocation*)location fromUser:(User*)user;
+
+-(void)addObserver:(id<ConversationObserver>)observer;
+-(void)removeObserver:(id<ConversationObserver>)observer;
 
 @end
