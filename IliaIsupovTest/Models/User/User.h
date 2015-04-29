@@ -6,26 +6,25 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+@import UIKit;
 
 @class Message;
+@class UserData;
 
-@interface User : NSManagedObject
+@interface User : NSObject {
+    UserData* _internals;
+}
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSData * avatar;
-@property (nonatomic, retain) NSSet *messages;
-@end
-
-@interface User (CoreDataGeneratedAccessors)
+@property (nonatomic, readonly) NSString* uid;
+@property (nonatomic, copy) NSString* name;
+@property (nonatomic, strong) UIImage* avatar;
 
 +(User*)currentUser;
 +(void)setCurrentUser:(User*)user;
 
-- (void)addMessagesObject:(Message *)value;
-- (void)removeMessagesObject:(Message *)value;
-- (void)addMessages:(NSSet *)values;
-- (void)removeMessages:(NSSet *)values;
+-(instancetype)init NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithUserData:(UserData*)userData NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithName:(NSString*)name avatar:(UIImage*)avatar;
 
 @end
+

@@ -23,10 +23,13 @@ typedef enum _MessageType {
 }
 
 @property (nonatomic, readonly) NSString* uid;
-@property (nonatomic, readonly) User *user;
 @property (nonatomic, readonly) MessageType type;
+@property (nonatomic, readonly) NSDate* date;
 
+@property (nonatomic, readonly) User *user;
+
+-(instancetype)init NS_DESIGNATED_INITIALIZER;
+-(instancetype)initWithMessageData:(MessageData*)data NS_DESIGNATED_INITIALIZER;
 -(instancetype)initWithUser:(User*)user;
--(instancetype)initWithMessageData:(MessageData*)data;
 
 @end
