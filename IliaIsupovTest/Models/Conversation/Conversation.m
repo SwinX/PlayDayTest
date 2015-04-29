@@ -10,6 +10,7 @@
 
 #import "Conversation.h"
 #import "Message.h"
+#import "User.h"
 
 #import "LocationMessage.h"
 #import "TextMessage.h"
@@ -92,7 +93,12 @@
 }
 
 -(BOOL)isUserInConversation:(User *)user {
-    return YES;
+    for (User* conversationUser in _users) {
+        if ([conversationUser isEqual:user]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 @end

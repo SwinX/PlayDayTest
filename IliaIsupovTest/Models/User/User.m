@@ -53,6 +53,14 @@ static User* _currentUser = nil;
     return self;
 }
 
+-(BOOL)isEqual:(id)object {
+    if (![object isKindOfClass:[self class]]) {
+        return NO;
+    }
+    User* another = (User*)object;
+    return [self.uid isEqualToString:another.uid];
+}
+
 -(NSString*)uid {
     return _internals.uid;
 }
