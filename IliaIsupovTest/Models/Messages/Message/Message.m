@@ -22,6 +22,7 @@
     if (self = [super init]) {
         _internals = [MessageData MR_createEntity];
         _internals.uid = [[NSUUID UUID] UUIDString];
+        _internals.messageDate = [NSDate date];
     }
     return self;
 }

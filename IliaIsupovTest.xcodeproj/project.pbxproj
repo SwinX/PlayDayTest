@@ -23,6 +23,9 @@
 		BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5381AF0E2B4002B6530 /* Message.m */; };
 		BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB53C1AF0FCA2002B6530 /* User_UserDataAccess.m */; };
 		BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB53F1AF1014D002B6530 /* Message_MessageDataAccess.m */; };
+		BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5421AF10C63002B6530 /* TextMessage.m */; };
+		BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5451AF10C6B002B6530 /* LocationMessage.m */; };
+		BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5481AF10C76002B6530 /* ImageMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		BA6BB53C1AF0FCA2002B6530 /* User_UserDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User_UserDataAccess.m; sourceTree = "<group>"; };
 		BA6BB53E1AF1014D002B6530 /* Message_MessageDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message_MessageDataAccess.h; sourceTree = "<group>"; };
 		BA6BB53F1AF1014D002B6530 /* Message_MessageDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message_MessageDataAccess.m; sourceTree = "<group>"; };
+		BA6BB5411AF10C63002B6530 /* TextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessage.h; sourceTree = "<group>"; };
+		BA6BB5421AF10C63002B6530 /* TextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage.m; sourceTree = "<group>"; };
+		BA6BB5441AF10C6B002B6530 /* LocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMessage.h; sourceTree = "<group>"; };
+		BA6BB5451AF10C6B002B6530 /* LocationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMessage.m; sourceTree = "<group>"; };
+		BA6BB5471AF10C76002B6530 /* ImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessage.h; sourceTree = "<group>"; };
+		BA6BB5481AF10C76002B6530 /* ImageMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +264,8 @@
 		BA6BB5341AF0E2B4002B6530 /* ImageMessage */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB5471AF10C76002B6530 /* ImageMessage.h */,
+				BA6BB5481AF10C76002B6530 /* ImageMessage.m */,
 			);
 			path = ImageMessage;
 			sourceTree = "<group>";
@@ -262,6 +273,8 @@
 		BA6BB5351AF0E2B4002B6530 /* LocationMessage */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB5441AF10C6B002B6530 /* LocationMessage.h */,
+				BA6BB5451AF10C6B002B6530 /* LocationMessage.m */,
 			);
 			path = LocationMessage;
 			sourceTree = "<group>";
@@ -280,6 +293,8 @@
 		BA6BB5391AF0E2B4002B6530 /* TextMessage */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB5411AF10C63002B6530 /* TextMessage.h */,
+				BA6BB5421AF10C63002B6530 /* TextMessage.m */,
 			);
 			path = TextMessage;
 			sourceTree = "<group>";
@@ -435,9 +450,12 @@
 				BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */,
 				BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */,
 				BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */,
+				BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
 				BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */,
+				BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */,
+				BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */,
 				BA6BB5321AF0E125002B6530 /* UserData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
