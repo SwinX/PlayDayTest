@@ -16,9 +16,11 @@
 		BA6BB4FC1AEFB77E002B6530 /* IliaIsupovTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB4FB1AEFB77E002B6530 /* IliaIsupovTestTests.m */; };
 		BA6BB50A1AEFD125002B6530 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5091AEFD125002B6530 /* MainViewController.m */; };
 		BA6BB50E1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB50C1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld */; };
-		BA6BB51B1AEFDDAB002B6530 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5171AEFDDAB002B6530 /* Message.m */; };
 		BA6BB51C1AEFDDAB002B6530 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB51A1AEFDDAB002B6530 /* User.m */; };
 		BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB51F1AEFE33A002B6530 /* Conversation.m */; };
+		BA6BB5311AF0E125002B6530 /* MessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB52D1AF0E125002B6530 /* MessageData.m */; };
+		BA6BB5321AF0E125002B6530 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5301AF0E125002B6530 /* UserData.m */; };
+		BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5381AF0E2B4002B6530 /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +51,16 @@
 		BA6BB5081AEFD125002B6530 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		BA6BB5091AEFD125002B6530 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		BA6BB50D1AEFD4C6002B6530 /* ChatDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatDataModel.xcdatamodel; sourceTree = "<group>"; };
-		BA6BB5161AEFDDAB002B6530 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		BA6BB5171AEFDDAB002B6530 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		BA6BB5191AEFDDAB002B6530 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		BA6BB51A1AEFDDAB002B6530 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BA6BB51E1AEFE33A002B6530 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
 		BA6BB51F1AEFE33A002B6530 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
+		BA6BB52C1AF0E125002B6530 /* MessageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageData.h; sourceTree = "<group>"; };
+		BA6BB52D1AF0E125002B6530 /* MessageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageData.m; sourceTree = "<group>"; };
+		BA6BB52F1AF0E125002B6530 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		BA6BB5301AF0E125002B6530 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		BA6BB5371AF0E2B4002B6530 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		BA6BB5381AF0E2B4002B6530 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +163,9 @@
 		BA6BB5061AEFD10A002B6530 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA6BB5331AF0E2B4002B6530 /* Messages */,
+				BA6BB5241AF0DF5A002B6530 /* CoreData */,
 				BA6BB51D1AEFE31D002B6530 /* Conversation */,
-				BA6BB5151AEFDDAB002B6530 /* Message */,
 				BA6BB5181AEFDDAB002B6530 /* User */,
 			);
 			path = Models;
@@ -181,15 +188,6 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		BA6BB5151AEFDDAB002B6530 /* Message */ = {
-			isa = PBXGroup;
-			children = (
-				BA6BB5161AEFDDAB002B6530 /* Message.h */,
-				BA6BB5171AEFDDAB002B6530 /* Message.m */,
-			);
-			path = Message;
-			sourceTree = "<group>";
-		};
 		BA6BB5181AEFDDAB002B6530 /* User */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +204,74 @@
 				BA6BB51F1AEFE33A002B6530 /* Conversation.m */,
 			);
 			path = Conversation;
+			sourceTree = "<group>";
+		};
+		BA6BB5241AF0DF5A002B6530 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB52B1AF0E125002B6530 /* MessageData */,
+				BA6BB52E1AF0E125002B6530 /* UserData */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BA6BB52B1AF0E125002B6530 /* MessageData */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB52C1AF0E125002B6530 /* MessageData.h */,
+				BA6BB52D1AF0E125002B6530 /* MessageData.m */,
+			);
+			path = MessageData;
+			sourceTree = "<group>";
+		};
+		BA6BB52E1AF0E125002B6530 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB52F1AF0E125002B6530 /* UserData.h */,
+				BA6BB5301AF0E125002B6530 /* UserData.m */,
+			);
+			path = UserData;
+			sourceTree = "<group>";
+		};
+		BA6BB5331AF0E2B4002B6530 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB5341AF0E2B4002B6530 /* ImageMessage */,
+				BA6BB5351AF0E2B4002B6530 /* LocationMessage */,
+				BA6BB5361AF0E2B4002B6530 /* Message */,
+				BA6BB5391AF0E2B4002B6530 /* TextMessage */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		BA6BB5341AF0E2B4002B6530 /* ImageMessage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageMessage;
+			sourceTree = "<group>";
+		};
+		BA6BB5351AF0E2B4002B6530 /* LocationMessage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationMessage;
+			sourceTree = "<group>";
+		};
+		BA6BB5361AF0E2B4002B6530 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				BA6BB5371AF0E2B4002B6530 /* Message.h */,
+				BA6BB5381AF0E2B4002B6530 /* Message.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		BA6BB5391AF0E2B4002B6530 /* TextMessage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextMessage;
 			sourceTree = "<group>";
 		};
 		D625569AA9619DE0B040C893 /* Pods */ = {
@@ -352,13 +418,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6BB5311AF0E125002B6530 /* MessageData.m in Sources */,
 				BA6BB50A1AEFD125002B6530 /* MainViewController.m in Sources */,
 				BA6BB50E1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld in Sources */,
 				BA6BB51C1AEFDDAB002B6530 /* User.m in Sources */,
-				BA6BB51B1AEFDDAB002B6530 /* Message.m in Sources */,
 				BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
+				BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */,
+				BA6BB5321AF0E125002B6530 /* UserData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

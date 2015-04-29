@@ -11,11 +11,18 @@
 
 #import <MagicalRecord/CoreData+MagicalRecord.h>
 
+@interface Conversation (Private)
+
+-(NSArray*)fetchSavedMessagesForConversationUsers;
+
+@end
+
 @implementation Conversation
 
 -(instancetype)initWithUsers:(NSArray *)users {
     if (self = [super init]) {
         _users = users;
+        
     }
     return self;
 }
@@ -29,6 +36,14 @@
 }
 
 -(Message*)sendLocation:(CLLocation*)location {
+    return nil;
+}
+
+@end
+
+@implementation Conversation (Private)
+
+-(NSArray*)fetchSavedMessagesForConversationUsers {
     return nil;
 }
 

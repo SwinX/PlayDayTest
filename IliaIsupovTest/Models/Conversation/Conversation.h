@@ -15,6 +15,7 @@
 @protocol ConversationDelegate <NSObject>
 
 -(void)user:(User*)user didSendMessage:(Message*)message;
+-(void)user:(User*)user failedToSendMessage:(Message*)message withError:(NSError*)error;
 
 @end
 

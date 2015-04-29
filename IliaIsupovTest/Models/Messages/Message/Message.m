@@ -13,6 +13,7 @@
 
 @dynamic messageType;
 @dynamic messageDate;
+@dynamic text;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic image;
