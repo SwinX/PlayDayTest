@@ -19,10 +19,16 @@
 
 -(NSArray*)fetchSavedMessagesForConversationUsers;
 
+-(Message*)sendMessage:(Message*)message fromUser:(User*)user;
+-(void)notifyMessageSent:(Message*)message fromUser:(User*)user;
+
+-(BOOL)isUserInConversation:(User*)user;
+
 @end
 
 @implementation Conversation {
     NSMutableArray* _observers;
+    NSMutableArray* _messages;
 }
 
 -(instancetype)initWithUsers:(NSArray *)users {
@@ -34,15 +40,18 @@
 }
 
 -(Message*)sendText:(NSString*)text fromUser:(User *)user {
-    return nil;
+    return [self sendMessage:[[TextMessage alloc] initWithText:text user:user]
+                    fromUser:user];
 }
 
 -(Message*)sendImage:(UIImage*)image fromUser:(User *)user {
-    return nil;
+    return [self sendMessage:[[ImageMessage alloc] initWithImage:image user:user]
+                    fromUser:user];
 }
 
 -(Message*)sendLocation:(CLLocation*)location fromUser:(User *)user {
-    return nil;
+    return [self sendMessage:[[LocationMessage alloc] initWithLocation:location user:user]
+                    fromUser:user];
 }
 
 -(void)addObserver:(id<ConversationObserver>)observer {
@@ -62,6 +71,28 @@
 
 -(NSArray*)fetchSavedMessagesForConversationUsers {
     return nil;
+}
+
+-(Message*)sendMessage:(Message*)message fromUser:(User*)user {
+    NSAssert([self isUserInConversation:user], @"Attempt to send message from user who is not in conversation");
+    [_messages addObject:message];
+    [self notifyMessageSent:message fromUser:user];
+    return message;
+}
+
+-(void)notifyMessageSent:(Message*)message fromUser:(User*)user {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0), dispatch_get_main_queue(), ^{ //in order to trigger on next run loop cycle
+        for (NSValue* observerValue in _observers) {
+            id<ConversationObserver> observer = [observerValue nonretainedObjectValue];
+            if ([observer respondsToSelector:@selector(user:didSendMessage:)]) {
+                [observer user:user didSendMessage:message];
+            }
+        }
+    });
+}
+
+-(BOOL)isUserInConversation:(User *)user {
+    return YES;
 }
 
 @end
