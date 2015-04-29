@@ -26,6 +26,7 @@
 		BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5421AF10C63002B6530 /* TextMessage.m */; };
 		BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5451AF10C6B002B6530 /* LocationMessage.m */; };
 		BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5481AF10C76002B6530 /* ImageMessage.m */; };
+		BA6BB54C1AF112A8002B6530 /* Message_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB54B1AF112A8002B6530 /* Message_JSQMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		BA6BB5451AF10C6B002B6530 /* LocationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMessage.m; sourceTree = "<group>"; };
 		BA6BB5471AF10C76002B6530 /* ImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessage.h; sourceTree = "<group>"; };
 		BA6BB5481AF10C76002B6530 /* ImageMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessage.m; sourceTree = "<group>"; };
+		BA6BB54A1AF112A8002B6530 /* Message_JSQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message_JSQMessage.h; sourceTree = "<group>"; };
+		BA6BB54B1AF112A8002B6530 /* Message_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message_JSQMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +289,8 @@
 				BA6BB5381AF0E2B4002B6530 /* Message.m */,
 				BA6BB53E1AF1014D002B6530 /* Message_MessageDataAccess.h */,
 				BA6BB53F1AF1014D002B6530 /* Message_MessageDataAccess.m */,
+				BA6BB54A1AF112A8002B6530 /* Message_JSQMessage.h */,
+				BA6BB54B1AF112A8002B6530 /* Message_JSQMessage.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */,
 				BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */,
 				BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */,
+				BA6BB54C1AF112A8002B6530 /* Message_JSQMessage.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
 				BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */,
