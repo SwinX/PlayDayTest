@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Conversation.h"
 
 @class User;
 @class Conversation;
-@protocol ConversationObserver;
 
-@interface Robot : NSObject
+@interface Robot : NSObject<ConversationObserver>
 
 -(instancetype)initWithUser:(User*)user conversation:(Conversation*)conversation NS_DESIGNATED_INITIALIZER;
 

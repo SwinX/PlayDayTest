@@ -19,7 +19,7 @@ static User* _currentUser = nil;
 +(User*)currentUser {
     @synchronized(self) {
         if (!_currentUser) {
-            UserData* currentUserData = [UserData MR_findFirstByAttribute:@"currentUser" withValue:[NSNumber numberWithBool:YES]];
+            UserData* currentUserData = [UserData MR_findFirstByAttribute:@"isCurrentUser" withValue:[NSNumber numberWithBool:YES]];
             if (currentUserData) {
                 _currentUser = [[User alloc] initWithUserData:currentUserData];
             }

@@ -7,7 +7,7 @@
 //
 
 #import "MessageData.h"
-#import "NSManagedObject.h"
+#import "ConversationData.h"
 #import "UserData.h"
 
 

@@ -69,17 +69,17 @@
 }
 
 -(Message*)sendText:(NSString*)text fromUser:(User *)user {
-    return [self sendMessage:[[TextMessage alloc] initWithText:text user:user]
+    return [self sendMessage:[[TextMessage alloc] initWithText:text user:user conversation:self]
                     fromUser:user];
 }
 
 -(Message*)sendImage:(UIImage*)image fromUser:(User *)user {
-    return [self sendMessage:[[ImageMessage alloc] initWithImage:image user:user]
+    return [self sendMessage:[[ImageMessage alloc] initWithImage:image user:user conversation:self]
                     fromUser:user];
 }
 
 -(Message*)sendLocation:(CLLocation*)location fromUser:(User *)user {
-    return [self sendMessage:[[LocationMessage alloc] initWithLocation:location user:user]
+    return [self sendMessage:[[LocationMessage alloc] initWithLocation:location user:user conversation:self]
                     fromUser:user];
 }
 
