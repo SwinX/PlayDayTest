@@ -10,6 +10,8 @@
 #import "MessageData.h"
 #import "User.h"
 
+#import "Constants.h"
+
 @implementation LocationMessage
 
 -(instancetype)initWithLocation:(CLLocation*)location user:(User*)user conversation:(Conversation *)conversation {
@@ -30,7 +32,10 @@
     if (!_JSQMessage) {
         JSQLocationMediaItem* mediaItem = [[JSQLocationMediaItem alloc] init];
         [mediaItem setLocation:self.location
-                        region:MKCoordinateRegionMakeWithDistance(self.location.coordinate, 500.0, 500.0) withCompletionHandler:nil];
+                        region:MKCoordinateRegionMakeWithDistance(self.location.coordinate, 500.0, 500.0) withCompletionHandler:^{
+                            [[NSNotificationCenter defaultCenter] postNotificationName:LocationMessageFinishedLoadingMapSnapshotNotification
+                                                                                object:self];
+                        }];
         mediaItem.appliesMediaViewMaskAsOutgoing = [self.user isEqual:[User currentUser]];
         _JSQMessage = [[JSQMessage alloc] initWithSenderId:self.user.uid
                                   senderDisplayName:self.user.name

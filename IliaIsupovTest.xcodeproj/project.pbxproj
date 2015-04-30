@@ -29,6 +29,7 @@
 		BAEF9A161AF246E200B7BD01 /* MessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A111AF246E200B7BD01 /* MessageData.m */; };
 		BAEF9A171AF246E200B7BD01 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A141AF246E200B7BD01 /* UserData.m */; };
 		BAEF9A1A1AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */; };
+		BAEF9A1F1AF2869200B7BD01 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A1E1AF2869200B7BD01 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		BAEF9A141AF246E200B7BD01 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		BAEF9A181AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation_ConversationDataAccess.h; sourceTree = "<group>"; };
 		BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation_ConversationDataAccess.m; sourceTree = "<group>"; };
+		BAEF9A1D1AF2869200B7BD01 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BAEF9A1E1AF2869200B7BD01 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,7 @@
 		BA6BB4DE1AEFB77D002B6530 /* IliaIsupovTest */ = {
 			isa = PBXGroup;
 			children = (
+				BAEF9A1B1AF2867500B7BD01 /* Misc */,
 				BA6BB50B1AEFD4AF002B6530 /* DataModel */,
 				BA6BB5051AEFD10A002B6530 /* Controllers */,
 				BA6BB5061AEFD10A002B6530 /* Models */,
@@ -330,6 +334,23 @@
 			path = UserData;
 			sourceTree = "<group>";
 		};
+		BAEF9A1B1AF2867500B7BD01 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF9A1C1AF2867500B7BD01 /* Constants */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		BAEF9A1C1AF2867500B7BD01 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF9A1D1AF2869200B7BD01 /* Constants.h */,
+				BAEF9A1E1AF2869200B7BD01 /* Constants.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		D625569AA9619DE0B040C893 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +512,7 @@
 				BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */,
 				BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */,
 				BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */,
+				BAEF9A1F1AF2869200B7BD01 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

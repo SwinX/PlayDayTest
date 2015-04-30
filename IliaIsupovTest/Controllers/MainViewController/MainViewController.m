@@ -15,6 +15,8 @@
 #import "User.h"
 #import "Robot.h"
 
+#import "Constants.h"
+
 CLLocationDegrees const MoscowLatitude = 55.7522200f;
 CLLocationDegrees const MoscowLongitude = 37.6155600f;
 
@@ -24,6 +26,8 @@ CLLocationDegrees const MoscowLongitude = 37.6155600f;
 -(Robot*)setupRobot;
 -(Conversation*)setupConversation;
 -(void)setupMessageBubbles;
+
+-(void)locationMessageDidFinishLoadingMapSnapshot:(NSNotification*)notification;
 
 @end
 
@@ -37,6 +41,16 @@ CLLocationDegrees const MoscowLongitude = 37.6155600f;
     
     JSQMessagesBubbleImage* _incomingMessageBubble;
     JSQMessagesBubbleImage* _outgoingMessageBubble;
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(locationMessageDidFinishLoadingMapSnapshot:)
+                                                     name:LocationMessageFinishedLoadingMapSnapshotNotification
+                                                   object:nil];
+    }
+    return self;
 }
 
 #pragma mark - UIViewController lifecycle
@@ -232,6 +246,10 @@ CLLocationDegrees const MoscowLongitude = 37.6155600f;
     JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
     _incomingMessageBubble = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
     _outgoingMessageBubble = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
+}
+
+-(void)locationMessageDidFinishLoadingMapSnapshot:(NSNotification*)notification {
+    [self.collectionView reloadData];
 }
 
 @end
