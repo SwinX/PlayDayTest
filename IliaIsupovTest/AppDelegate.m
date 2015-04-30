@@ -15,7 +15,9 @@
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    NSTimer* _saveTimer;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

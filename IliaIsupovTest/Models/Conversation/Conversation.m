@@ -126,6 +126,7 @@
     NSAssert([self isUserInConversation:user], @"Attempt to send message from user who is not in conversation");
     [_messages addObject:message];
     [self notifyMessageSent:message fromUser:user];
+    [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreWithCompletion:nil];
     return message;
 }
 
