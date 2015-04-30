@@ -22,14 +22,13 @@
 @interface MainViewController (Private)
 
 -(void)setupDemoDataStructuresIfNeeded;
--(void)setupCurrentUser;
 -(Robot*)setupRobot;
 -(Conversation*)setupConversation;
 -(void)setupMessageBubbles;
 
 @end
 
-@interface MainViewController ()<ConversationObserver>
+@interface MainViewController ()<ConversationObserver, UIActionSheetDelegate>
 
 @end
 
@@ -74,15 +73,37 @@
 }
 
 #pragma mark - JSQMessagesViewController method overrides
-
-#pragma mark - JSQMessagesViewController method overrides
 -(void)didPressSendButton:(UIButton *)button withMessageText:(NSString *)text senderId:(NSString *)senderId senderDisplayName:(NSString *)senderDisplayName date:(NSDate *)date {
     [_conversation sendText:text fromUser:[User currentUser]];
     [self finishSendingMessageAnimated:YES];
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Media messages"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:@"Send photo", @"Send location", nil];
     
+    [sheet showFromToolbar:self.inputToolbar];
+}
+
+#pragma mark - UIActionSheetDelegate implementation
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        return;
+    }
+    
+    switch (buttonIndex) {
+        case 0:
+            [_conversation sendImage:[UIImage imageNamed:@"TestImage"] fromUser:[User currentUser]];
+            break;
+        case 1:
+            break;
+    }
+    
+    [JSQSystemSoundPlayer jsq_playMessageSentSound];
+    [self finishSendingMessageAnimated:YES];
 }
 
 #pragma mark - JSQMessagesCollectionViewDataSource
@@ -200,13 +221,6 @@
         [conversation addUser:robot];
         [[NSManagedObjectContext MR_contextForCurrentThread] MR_saveToPersistentStoreAndWait];
     }
-}
-
--(void)setupCurrentUser {
-    if (![User currentUser]) {
-        [User setCurrentUser:[[User alloc] initWithName:@"Current user" avatar:nil]];
-    }
-
 }
 
 -(Robot*)setupRobot {
