@@ -10,6 +10,8 @@
 
 #import "Conversation.h"
 #import "Message.h"
+#import "Message_Runtime.h"
+#import "MessageData.h"
 
 #import "User.h"
 #import "UserData.h"
@@ -43,7 +45,7 @@
 
 -(instancetype)init {
     if (self = [super init]) {
-        _internals = [ConversationData MR_createEntity];
+        _internals = [ConversationData MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
         _internals.uid = [[NSUUID UUID] UUIDString];
         [self initializeCollections];
     }
@@ -104,7 +106,8 @@
 
 -(void)addMessagesFromMessagesData {
     for (MessageData* message in _internals.messages) {
-        [_messages addObject:[[Message alloc] initWithMessageData:message]];
+        Class messageClass = [Message messageClassForType:[message.messageType intValue]];
+        [_messages addObject:[[messageClass alloc] initWithMessageData:message]];
     }
     [_messages sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         Message* first = (Message*)obj1;

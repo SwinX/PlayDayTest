@@ -30,6 +30,7 @@
 		BAEF9A171AF246E200B7BD01 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A141AF246E200B7BD01 /* UserData.m */; };
 		BAEF9A1A1AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */; };
 		BAEF9A1F1AF2869200B7BD01 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A1E1AF2869200B7BD01 /* Constants.m */; };
+		BAEF9A221AF28BCB00B7BD01 /* Message_Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A211AF28BCB00B7BD01 /* Message_Runtime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation_ConversationDataAccess.m; sourceTree = "<group>"; };
 		BAEF9A1D1AF2869200B7BD01 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		BAEF9A1E1AF2869200B7BD01 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		BAEF9A201AF28BCB00B7BD01 /* Message_Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message_Runtime.h; sourceTree = "<group>"; };
+		BAEF9A211AF28BCB00B7BD01 /* Message_Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message_Runtime.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +288,8 @@
 				BA6BB5381AF0E2B4002B6530 /* Message.m */,
 				BA6BB53E1AF1014D002B6530 /* Message_MessageDataAccess.h */,
 				BA6BB53F1AF1014D002B6530 /* Message_MessageDataAccess.m */,
+				BAEF9A201AF28BCB00B7BD01 /* Message_Runtime.h */,
+				BAEF9A211AF28BCB00B7BD01 /* Message_Runtime.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -502,6 +507,7 @@
 				BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */,
 				BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */,
 				BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */,
+				BAEF9A221AF28BCB00B7BD01 /* Message_Runtime.m in Sources */,
 				BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */,
 				BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,

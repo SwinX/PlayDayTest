@@ -25,7 +25,7 @@
 
 -(instancetype)init {
     if (self = [super init]) {
-        _internals = [MessageData MR_createEntity];
+        _internals = [MessageData MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
         _internals.uid = [[NSUUID UUID] UUIDString];
         _internals.messageDate = [NSDate date];
     }
@@ -68,6 +68,9 @@
 }
 
 -(User*)user {
+    if (!_user) {
+        _user = [[User alloc] initWithUserData:_internals.user];
+    }
     return _user;
 }
 

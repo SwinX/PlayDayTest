@@ -40,7 +40,7 @@ static User* _currentUser = nil;
 
 -(instancetype)init {
     if (self = [super init]) {
-        _internals = [UserData MR_createEntity];
+        _internals = [UserData MR_createInContext:[NSManagedObjectContext MR_defaultContext]];
         _internals.uid = [[NSUUID UUID] UUIDString];
     }
     return self;
