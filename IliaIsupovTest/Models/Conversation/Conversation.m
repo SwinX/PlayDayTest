@@ -28,8 +28,6 @@
 -(void)addMessagesFromMessagesData;
 -(void)addUsersFromUserData;
 
--(NSArray*)fetchSavedMessagesForConversationUsers;
-
 -(Message*)sendMessage:(Message*)message fromUser:(User*)user;
 -(void)notifyMessageSent:(Message*)message fromUser:(User*)user;
 
@@ -119,10 +117,6 @@
     for (UserData* userData in _internals.users) {
         [_users addObject:[[User alloc] initWithUserData:userData]];
     }
-}
-
--(NSArray*)fetchSavedMessagesForConversationUsers {
-    return nil;
 }
 
 -(Message*)sendMessage:(Message*)message fromUser:(User*)user {

@@ -30,6 +30,7 @@
 -(instancetype)initWithUser:(User*)user conversation:(Conversation*)conversation {
     if (self = [super init]) {
         _user = user;
+        _conversation = conversation;
     }
     return self;
 }
