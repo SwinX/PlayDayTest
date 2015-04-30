@@ -100,6 +100,36 @@
     }
 }
 
+- (NSAttributedString *)collectionView:(JSQMessagesCollectionView *)collectionView attributedTextForCellTopLabelAtIndexPath:(NSIndexPath *)indexPath {
+    Message* message = [_conversation.messages objectAtIndex:indexPath.row];
+    return [[JSQMessagesTimestampFormatter sharedFormatter] attributedTimestampForDate:message.date];
+}
+
+- (NSAttributedString *)collectionView:(JSQMessagesCollectionView *)collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:(NSIndexPath *)indexPath {
+    Message *message = [_conversation.messages objectAtIndex:indexPath.item];
+    
+    /**
+     *  iOS7-style sender name labels
+     */
+    if ([message.user isEqual:[User currentUser]]) {
+        return nil;
+    }
+    
+    if (indexPath.item - 1 > 0) {
+        Message *previousMessage = [_conversation.messages objectAtIndex:indexPath.item - 1];
+        if ([previousMessage.user isEqual:message.user]) {
+            return nil;
+        }
+    }
+    
+    /**
+     *  Don't specify attributes to use the defaults.
+     */
+    return [[NSAttributedString alloc] initWithString:message.user.name];
+}
+
+
+
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _conversation.messages.count;
@@ -124,6 +154,34 @@
     }
     
     return cell;
+}
+
+#pragma mark - JSQMessages collection view flow layout delegate
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForCellTopLabelAtIndexPath:(NSIndexPath *)indexPath {
+    return kJSQMessagesCollectionViewCellLabelHeightDefault;
+}
+
+- (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForMessageBubbleTopLabelAtIndexPath:(NSIndexPath *)indexPath
+{
+    /**
+     *  iOS7-style sender name labels
+     */
+    Message* message = [_conversation.messages objectAtIndex:indexPath.row];
+    if ([[User currentUser] isEqual:message.user]) {
+        return 0.0f;
+    }
+    
+    if (indexPath.item - 1 > 0) {
+        
+        Message *previousMessage = [_conversation.messages objectAtIndex:indexPath.item - 1];
+        if ([previousMessage.user isEqual:message.user]) {
+            return 0.0f;
+        }
+    }
+    
+    return kJSQMessagesCollectionViewCellLabelHeightDefault;
 }
 
 @end
