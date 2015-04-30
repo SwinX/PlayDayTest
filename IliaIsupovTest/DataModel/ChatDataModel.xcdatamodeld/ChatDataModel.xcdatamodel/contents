@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ConversationData" representedClassName="ConversationData" syncable="YES">
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MessageData" inverseName="conversation" inverseEntity="MessageData" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserData" inverseName="conversations" inverseEntity="UserData" syncable="YES"/>
+    </entity>
     <entity name="MessageData" representedClassName="MessageData" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -8,6 +13,7 @@
         <attribute name="messageText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="messageType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="conversation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConversationData" inverseName="messages" inverseEntity="ConversationData" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserData" inverseName="messages" inverseEntity="UserData" syncable="YES"/>
     </entity>
     <entity name="UserData" representedClassName="UserData" syncable="YES">
@@ -15,10 +21,12 @@
         <attribute name="isCurrentUser" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="conversations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ConversationData" inverseName="users" inverseEntity="ConversationData" syncable="YES"/>
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MessageData" inverseName="user" inverseEntity="MessageData" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MessageData" positionX="180" positionY="-36" width="128" height="163"/>
-        <element name="UserData" positionX="-54" positionY="9" width="128" height="118"/>
+        <element name="MessageData" positionX="180" positionY="-36" width="128" height="180"/>
+        <element name="UserData" positionX="-54" positionY="9" width="128" height="135"/>
+        <element name="ConversationData" positionX="63" positionY="36" width="128" height="90"/>
     </elements>
 </model>

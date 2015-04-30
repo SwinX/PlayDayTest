@@ -10,13 +10,23 @@
 
 #import "Conversation.h"
 #import "Message.h"
+
 #import "User.h"
+#import "UserData.h"
+#import "User_UserDataAccess.h"
 
 #import "LocationMessage.h"
 #import "TextMessage.h"
 #import "ImageMessage.h"
 
+#import "ConversationData.h"
+#import "Conversation_ConversationDataAccess.h"
+
 @interface Conversation (Private)
+
+-(void)initializeCollections;
+-(void)addMessagesFromMessagesData;
+-(void)addUsersFromUserData;
 
 -(NSArray*)fetchSavedMessagesForConversationUsers;
 
@@ -30,15 +40,32 @@
 @implementation Conversation {
     NSMutableArray* _observers;
     NSMutableArray* _messages;
+    NSMutableArray* _users;
 }
 
--(instancetype)initWithUsers:(NSArray *)users {
+-(instancetype)init {
     if (self = [super init]) {
-        _users = [NSArray arrayWithArray:users];
-        _messages = [NSMutableArray array];
-        _observers = [NSMutableArray array];
+        _internals = [ConversationData MR_createEntity];
+        _internals.uid = [[NSUUID UUID] UUIDString];
+        [self initializeCollections];
     }
     return self;
+}
+
+-(instancetype)initWithConversationData:(ConversationData *)conversationData {
+    if (self = [super init]) {
+        _internals = conversationData;
+        [self initializeCollections];
+        [self addMessagesFromMessagesData];
+        [self addUsersFromUserData];
+    }
+    return self;
+}
+
+-(void)addUser:(User*)user {
+    [self addUserData:[user userData]];
+    [user addConversationData:_internals];
+    [_users addObject:user];
 }
 
 -(Message*)sendText:(NSString*)text fromUser:(User *)user {
@@ -70,6 +97,29 @@
 @end
 
 @implementation Conversation (Private)
+
+-(void)initializeCollections {
+    _users = [NSMutableArray array];
+    _messages = [NSMutableArray array];
+    _observers = [NSMutableArray array];
+}
+
+-(void)addMessagesFromMessagesData {
+    for (MessageData* message in _internals.messages) {
+        [_messages addObject:[[Message alloc] initWithMessageData:message]];
+    }
+    [_messages sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        Message* first = (Message*)obj1;
+        Message* second = (Message*)obj2;
+        return [first.date compare:second.date];
+    }];
+}
+
+-(void)addUsersFromUserData {
+    for (UserData* userData in _internals.users) {
+        [_users addObject:[[User alloc] initWithUserData:userData]];
+    }
+}
 
 -(NSArray*)fetchSavedMessagesForConversationUsers {
     return nil;

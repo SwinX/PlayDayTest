@@ -14,6 +14,6 @@
 
 @property (nonatomic, readonly) CLLocation* location;
 
--(instancetype)initWithLocation:(CLLocation*)location user:(User*)user;
+-(instancetype)initWithLocation:(CLLocation*)location user:(User*)user conversation:(Conversation*)conversation;
 
 @end

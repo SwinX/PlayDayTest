@@ -18,8 +18,6 @@
 		BA6BB50E1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB50C1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld */; };
 		BA6BB51C1AEFDDAB002B6530 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB51A1AEFDDAB002B6530 /* User.m */; };
 		BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB51F1AEFE33A002B6530 /* Conversation.m */; };
-		BA6BB5311AF0E125002B6530 /* MessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB52D1AF0E125002B6530 /* MessageData.m */; };
-		BA6BB5321AF0E125002B6530 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5301AF0E125002B6530 /* UserData.m */; };
 		BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5381AF0E2B4002B6530 /* Message.m */; };
 		BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB53C1AF0FCA2002B6530 /* User_UserDataAccess.m */; };
 		BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB53F1AF1014D002B6530 /* Message_MessageDataAccess.m */; };
@@ -31,6 +29,11 @@
 		BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */; };
 		BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */; };
 		BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF99FD1AF23D1600B7BD01 /* Robot.m */; };
+		BAEF9A021AF241D400B7BD01 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A011AF241D400B7BD01 /* Repository.m */; };
+		BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A0E1AF246E200B7BD01 /* ConversationData.m */; };
+		BAEF9A161AF246E200B7BD01 /* MessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A111AF246E200B7BD01 /* MessageData.m */; };
+		BAEF9A171AF246E200B7BD01 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A141AF246E200B7BD01 /* UserData.m */; };
+		BAEF9A1A1AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +68,6 @@
 		BA6BB51A1AEFDDAB002B6530 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		BA6BB51E1AEFE33A002B6530 /* Conversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation.h; sourceTree = "<group>"; };
 		BA6BB51F1AEFE33A002B6530 /* Conversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation.m; sourceTree = "<group>"; };
-		BA6BB52C1AF0E125002B6530 /* MessageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageData.h; sourceTree = "<group>"; };
-		BA6BB52D1AF0E125002B6530 /* MessageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageData.m; sourceTree = "<group>"; };
-		BA6BB52F1AF0E125002B6530 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
-		BA6BB5301AF0E125002B6530 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
 		BA6BB5371AF0E2B4002B6530 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		BA6BB5381AF0E2B4002B6530 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		BA6BB53B1AF0FCA2002B6530 /* User_UserDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User_UserDataAccess.h; sourceTree = "<group>"; };
@@ -91,6 +90,16 @@
 		BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage_JSQMessage.m; sourceTree = "<group>"; };
 		BAEF99FC1AF23D1600B7BD01 /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		BAEF99FD1AF23D1600B7BD01 /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
+		BAEF9A001AF241D400B7BD01 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		BAEF9A011AF241D400B7BD01 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		BAEF9A0D1AF246E200B7BD01 /* ConversationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationData.h; sourceTree = "<group>"; };
+		BAEF9A0E1AF246E200B7BD01 /* ConversationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationData.m; sourceTree = "<group>"; };
+		BAEF9A101AF246E200B7BD01 /* MessageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageData.h; sourceTree = "<group>"; };
+		BAEF9A111AF246E200B7BD01 /* MessageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageData.m; sourceTree = "<group>"; };
+		BAEF9A131AF246E200B7BD01 /* UserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserData.h; sourceTree = "<group>"; };
+		BAEF9A141AF246E200B7BD01 /* UserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserData.m; sourceTree = "<group>"; };
+		BAEF9A181AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversation_ConversationDataAccess.h; sourceTree = "<group>"; };
+		BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversation_ConversationDataAccess.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +202,7 @@
 		BA6BB5061AEFD10A002B6530 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAEF99FF1AF241BD00B7BD01 /* Repository */,
 				BAEF99FB1AF23D0500B7BD01 /* Robot */,
 				BA6BB5331AF0E2B4002B6530 /* Messages */,
 				BA6BB5241AF0DF5A002B6530 /* CoreData */,
@@ -235,6 +245,8 @@
 			children = (
 				BA6BB51E1AEFE33A002B6530 /* Conversation.h */,
 				BA6BB51F1AEFE33A002B6530 /* Conversation.m */,
+				BAEF9A181AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.h */,
+				BAEF9A191AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m */,
 			);
 			path = Conversation;
 			sourceTree = "<group>";
@@ -242,28 +254,11 @@
 		BA6BB5241AF0DF5A002B6530 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				BA6BB52B1AF0E125002B6530 /* MessageData */,
-				BA6BB52E1AF0E125002B6530 /* UserData */,
+				BAEF9A0C1AF246E200B7BD01 /* ConversationData */,
+				BAEF9A0F1AF246E200B7BD01 /* MessageData */,
+				BAEF9A121AF246E200B7BD01 /* UserData */,
 			);
 			path = CoreData;
-			sourceTree = "<group>";
-		};
-		BA6BB52B1AF0E125002B6530 /* MessageData */ = {
-			isa = PBXGroup;
-			children = (
-				BA6BB52C1AF0E125002B6530 /* MessageData.h */,
-				BA6BB52D1AF0E125002B6530 /* MessageData.m */,
-			);
-			path = MessageData;
-			sourceTree = "<group>";
-		};
-		BA6BB52E1AF0E125002B6530 /* UserData */ = {
-			isa = PBXGroup;
-			children = (
-				BA6BB52F1AF0E125002B6530 /* UserData.h */,
-				BA6BB5301AF0E125002B6530 /* UserData.m */,
-			);
-			path = UserData;
 			sourceTree = "<group>";
 		};
 		BA6BB5331AF0E2B4002B6530 /* Messages */ = {
@@ -330,6 +325,42 @@
 				BAEF99FD1AF23D1600B7BD01 /* Robot.m */,
 			);
 			path = Robot;
+			sourceTree = "<group>";
+		};
+		BAEF99FF1AF241BD00B7BD01 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF9A001AF241D400B7BD01 /* Repository.h */,
+				BAEF9A011AF241D400B7BD01 /* Repository.m */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BAEF9A0C1AF246E200B7BD01 /* ConversationData */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF9A0D1AF246E200B7BD01 /* ConversationData.h */,
+				BAEF9A0E1AF246E200B7BD01 /* ConversationData.m */,
+			);
+			path = ConversationData;
+			sourceTree = "<group>";
+		};
+		BAEF9A0F1AF246E200B7BD01 /* MessageData */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF9A101AF246E200B7BD01 /* MessageData.h */,
+				BAEF9A111AF246E200B7BD01 /* MessageData.m */,
+			);
+			path = MessageData;
+			sourceTree = "<group>";
+		};
+		BAEF9A121AF246E200B7BD01 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF9A131AF246E200B7BD01 /* UserData.h */,
+				BAEF9A141AF246E200B7BD01 /* UserData.m */,
+			);
+			path = UserData;
 			sourceTree = "<group>";
 		};
 		D625569AA9619DE0B040C893 /* Pods */ = {
@@ -476,25 +507,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA6BB5311AF0E125002B6530 /* MessageData.m in Sources */,
 				BA6BB50A1AEFD125002B6530 /* MainViewController.m in Sources */,
 				BA6BB50E1AEFD4C6002B6530 /* ChatDataModel.xcdatamodeld in Sources */,
 				BA6BB51C1AEFDDAB002B6530 /* User.m in Sources */,
+				BAEF9A161AF246E200B7BD01 /* MessageData.m in Sources */,
 				BA6BB4E51AEFB77D002B6530 /* AppDelegate.m in Sources */,
 				BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */,
 				BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */,
 				BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */,
 				BA6BB54C1AF112A8002B6530 /* Message_JSQMessage.m in Sources */,
+				BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */,
 				BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */,
 				BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */,
+				BAEF9A021AF241D400B7BD01 /* Repository.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
 				BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */,
+				BAEF9A171AF246E200B7BD01 /* UserData.m in Sources */,
+				BAEF9A1A1AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m in Sources */,
 				BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */,
 				BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */,
 				BA6BB54F1AF11358002B6530 /* ImageMessage_JSQMessage.m in Sources */,
 				BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */,
-				BA6BB5321AF0E125002B6530 /* UserData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

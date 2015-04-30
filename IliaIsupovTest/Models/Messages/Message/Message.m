@@ -12,7 +12,12 @@
 #import "User.h"
 #import "User_UserDataAccess.h"
 
+#import "Conversation.h"
+#import "Conversation_ConversationDataAccess.h"
+
 #import "MessageData.h"
+#import "ConversationData.h"
+#import "UserData.h"
 
 @implementation Message {
     User* _user;
@@ -34,10 +39,13 @@
     return self;
 }
 
--(instancetype)initWithUser:(User*)user {
+-(instancetype)initWithUser:(User*)user conversation:(Conversation *)conversation {
     if (self = [self init]) {
         _internals.user = [user userData];
         [user addMessage:_internals];
+        
+        _internals.conversation = [conversation conversationData];
+        [conversation addMessageData:_internals];
         _user = user;
     }
     return self;
@@ -53,6 +61,10 @@
 
 -(NSDate*)date {
     return _internals.messageDate;
+}
+
+-(NSString*)conversationId {
+    return _internals.conversation.uid;
 }
 
 -(User*)user {

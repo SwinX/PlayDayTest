@@ -12,6 +12,6 @@
 
 @property (nonatomic, readonly) NSString* text;
 
--(instancetype)initWithText:(NSString*)text user:(User*)user;
+-(instancetype)initWithText:(NSString*)text user:(User*)user conversation:(Conversation*)conversation;
 
 @end

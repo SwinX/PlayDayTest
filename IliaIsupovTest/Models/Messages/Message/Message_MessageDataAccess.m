@@ -19,4 +19,8 @@
     _internals.user = userData;
 }
 
+-(void)addConversationData:(ConversationData*)conversationData {
+    _internals.conversation = conversationData;
+}
+
 @end

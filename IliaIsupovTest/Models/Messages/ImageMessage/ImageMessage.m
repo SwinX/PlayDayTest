@@ -11,8 +11,8 @@
 
 @implementation ImageMessage
 
--(instancetype)initWithImage:(UIImage*)image user:(User*)user {
-    if (self = [super initWithUser:user]) {
+-(instancetype)initWithImage:(UIImage*)image user:(User*)user conversation:(Conversation *)conversation {
+    if (self = [super initWithUser:user conversation:conversation]) {
         _internals.messageImage = UIImagePNGRepresentation(image);
         _internals.messageType = [NSNumber numberWithInt:MTImage];
     }

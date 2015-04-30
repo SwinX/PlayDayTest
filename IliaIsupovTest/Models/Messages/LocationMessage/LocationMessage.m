@@ -11,8 +11,8 @@
 
 @implementation LocationMessage
 
--(instancetype)initWithLocation:(CLLocation*)location user:(User*)user {
-    if (self = [super initWithUser:user]) {
+-(instancetype)initWithLocation:(CLLocation*)location user:(User*)user conversation:(Conversation *)conversation {
+    if (self = [super initWithUser:user conversation:conversation]) {
         _internals.messageType = [NSNumber numberWithInt:MTLocation];
         _internals.latitude = [NSNumber numberWithDouble:location.coordinate.latitude];
         _internals.longitude = [NSNumber numberWithDouble:location.coordinate.longitude];

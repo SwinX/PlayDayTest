@@ -14,6 +14,6 @@
 
 @property (nonatomic, readonly) UIImage* image;
 
--(instancetype)initWithImage:(UIImage*)image user:(User*)user;
+-(instancetype)initWithImage:(UIImage*)image user:(User*)user conversation:(Conversation*)conversation;
 
 @end

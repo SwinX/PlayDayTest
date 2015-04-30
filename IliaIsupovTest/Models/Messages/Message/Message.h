@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 @class User;
+@class Conversation;
 @class MessageData;
 
 typedef enum _MessageType {
@@ -26,10 +27,12 @@ typedef enum _MessageType {
 @property (nonatomic, readonly) MessageType type;
 @property (nonatomic, readonly) NSDate* date;
 
+@property (nonatomic, readonly) NSString* conversationId;
+
 @property (nonatomic, readonly) User *user;
 
 -(instancetype)init NS_DESIGNATED_INITIALIZER;
 -(instancetype)initWithMessageData:(MessageData*)data NS_DESIGNATED_INITIALIZER;
--(instancetype)initWithUser:(User*)user;
+-(instancetype)initWithUser:(User*)user conversation:(Conversation*)conversation;
 
 @end

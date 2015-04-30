@@ -21,4 +21,8 @@
     [_internals addMessagesObject:message];
 }
 
+-(void)addConversationData:(ConversationData*)conversationData {
+    [_internals addConversationsObject:conversationData];
+}
+
 @end

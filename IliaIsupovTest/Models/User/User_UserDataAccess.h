@@ -9,10 +9,12 @@
 #import "User.h"
 
 @class MessageData;
+@class ConversationData;
 
 @interface User (UserDataAccess)
 
 -(UserData*)userData;
 -(void)addMessage:(MessageData*)message;
+-(void)addConversationData:(ConversationData*)conversationData;
 
 @end

@@ -11,8 +11,8 @@
 
 @implementation TextMessage
 
--(instancetype)initWithText:(NSString *)text user:(User *)user {
-    if (self = [super initWithUser:user]) {
+-(instancetype)initWithText:(NSString *)text user:(User *)user conversation:(Conversation *)conversation {
+    if (self = [super initWithUser:user conversation:conversation]) {
         _internals.messageType = [NSNumber numberWithInt:MTText];
         _internals.messageText = text;
     }
