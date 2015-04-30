@@ -29,7 +29,8 @@
 -(JSQMessage*)JSQMessage {
     if (!_JSQMessage) {
         JSQLocationMediaItem* mediaItem = [[JSQLocationMediaItem alloc] init];
-        [mediaItem setLocation:self.location withCompletionHandler:nil];
+        [mediaItem setLocation:self.location
+                        region:MKCoordinateRegionMakeWithDistance(self.location.coordinate, 500.0, 500.0) withCompletionHandler:nil];
         mediaItem.appliesMediaViewMaskAsOutgoing = [self.user isEqual:[User currentUser]];
         _JSQMessage = [[JSQMessage alloc] initWithSenderId:self.user.uid
                                   senderDisplayName:self.user.name

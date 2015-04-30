@@ -98,7 +98,7 @@ CLLocationDegrees const MoscowLongitude = 37.6155600f;
             [_conversation sendImage:[UIImage imageNamed:@"TestImage"] fromUser:[User currentUser]];
             break;
         case 1:
-            [_conversation sendLocation:[[CLLocation alloc] initWithLatitude:MoscowLatitude longitude:MoscowLatitude] fromUser:[User currentUser]];
+            [_conversation sendLocation:[[CLLocation alloc] initWithLatitude:MoscowLatitude longitude:MoscowLongitude] fromUser:[User currentUser]];
             break;
     }
     
