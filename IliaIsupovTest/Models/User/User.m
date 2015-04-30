@@ -8,6 +8,7 @@
 
 #import <MagicalRecord/CoreData+MagicalRecord.h>
 #import "User.h"
+#import "User_UserDataAccess.h"
 
 #import "UserData.h"
 
@@ -17,6 +18,12 @@ static User* _currentUser = nil;
 
 +(User*)currentUser {
     @synchronized(self) {
+        if (!_currentUser) {
+            UserData* currentUserData = [UserData MR_findFirstByAttribute:@"currentUser" withValue:[NSNumber numberWithBool:YES]];
+            if (currentUserData) {
+                _currentUser = [[User alloc] initWithUserData:currentUserData];
+            }
+        }
         return _currentUser;
     }
 }
@@ -24,6 +31,8 @@ static User* _currentUser = nil;
 +(void)setCurrentUser:(User*)user {
     @synchronized(self) {
         if (_currentUser != user) {
+            [_currentUser userData].isCurrentUser = [NSNumber numberWithBool:NO];
+            [user userData].isCurrentUser = [NSNumber numberWithBool:YES];
             _currentUser = user;
         }
     }

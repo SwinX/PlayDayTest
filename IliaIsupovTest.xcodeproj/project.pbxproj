@@ -29,7 +29,6 @@
 		BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */; };
 		BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */; };
 		BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF99FD1AF23D1600B7BD01 /* Robot.m */; };
-		BAEF9A021AF241D400B7BD01 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A011AF241D400B7BD01 /* Repository.m */; };
 		BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A0E1AF246E200B7BD01 /* ConversationData.m */; };
 		BAEF9A161AF246E200B7BD01 /* MessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A111AF246E200B7BD01 /* MessageData.m */; };
 		BAEF9A171AF246E200B7BD01 /* UserData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A141AF246E200B7BD01 /* UserData.m */; };
@@ -90,8 +89,6 @@
 		BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage_JSQMessage.m; sourceTree = "<group>"; };
 		BAEF99FC1AF23D1600B7BD01 /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		BAEF99FD1AF23D1600B7BD01 /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
-		BAEF9A001AF241D400B7BD01 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
-		BAEF9A011AF241D400B7BD01 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 		BAEF9A0D1AF246E200B7BD01 /* ConversationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationData.h; sourceTree = "<group>"; };
 		BAEF9A0E1AF246E200B7BD01 /* ConversationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationData.m; sourceTree = "<group>"; };
 		BAEF9A101AF246E200B7BD01 /* MessageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageData.h; sourceTree = "<group>"; };
@@ -202,7 +199,6 @@
 		BA6BB5061AEFD10A002B6530 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAEF99FF1AF241BD00B7BD01 /* Repository */,
 				BAEF99FB1AF23D0500B7BD01 /* Robot */,
 				BA6BB5331AF0E2B4002B6530 /* Messages */,
 				BA6BB5241AF0DF5A002B6530 /* CoreData */,
@@ -325,15 +321,6 @@
 				BAEF99FD1AF23D1600B7BD01 /* Robot.m */,
 			);
 			path = Robot;
-			sourceTree = "<group>";
-		};
-		BAEF99FF1AF241BD00B7BD01 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				BAEF9A001AF241D400B7BD01 /* Repository.h */,
-				BAEF9A011AF241D400B7BD01 /* Repository.m */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		BAEF9A0C1AF246E200B7BD01 /* ConversationData */ = {
@@ -519,7 +506,6 @@
 				BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */,
 				BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */,
 				BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */,
-				BAEF9A021AF241D400B7BD01 /* Repository.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
 				BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */,
