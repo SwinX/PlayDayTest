@@ -8,6 +8,7 @@
 
 #import "ImageMessage.h"
 #import "MessageData.h"
+#import "User.h"
 
 @implementation ImageMessage {
     UIImage* _image;
@@ -26,6 +27,18 @@
         _image = [UIImage imageWithData:_internals.messageImage]; //for speed up. Memory needs to be optimized somehow there
     }
     return _image;
+}
+
+-(JSQMessage*)JSQMessage {
+    if (!_JSQMessage) {
+        JSQPhotoMediaItem* mediaItem = [[JSQPhotoMediaItem alloc] initWithImage:self.image];
+        mediaItem.appliesMediaViewMaskAsOutgoing = [self.user isEqual:[User currentUser]];
+        _JSQMessage = [[JSQMessage alloc] initWithSenderId:self.user.uid
+                                  senderDisplayName:self.user.name
+                                               date:self.date
+                                              media:mediaItem];
+    }
+    return _JSQMessage;
 }
 
 @end

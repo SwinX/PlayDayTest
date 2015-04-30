@@ -15,9 +15,8 @@
 #import "User.h"
 #import "Robot.h"
 
-#import "Message_JSQMessage.h"
-#import "TextMessage_JSQMessage.h"
-#import "LocationMessage_JSQMessage.h"
+CLLocationDegrees const MoscowLatitude = 55.7522200f;
+CLLocationDegrees const MoscowLongitude = 37.6155600f;
 
 @interface MainViewController (Private)
 
@@ -99,6 +98,7 @@
             [_conversation sendImage:[UIImage imageNamed:@"TestImage"] fromUser:[User currentUser]];
             break;
         case 1:
+            [_conversation sendLocation:[[CLLocation alloc] initWithLatitude:MoscowLatitude longitude:MoscowLatitude] fromUser:[User currentUser]];
             break;
     }
     

@@ -24,10 +24,6 @@
 		BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5421AF10C63002B6530 /* TextMessage.m */; };
 		BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5451AF10C6B002B6530 /* LocationMessage.m */; };
 		BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5481AF10C76002B6530 /* ImageMessage.m */; };
-		BA6BB54C1AF112A8002B6530 /* Message_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB54B1AF112A8002B6530 /* Message_JSQMessage.m */; };
-		BA6BB54F1AF11358002B6530 /* ImageMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB54E1AF11358002B6530 /* ImageMessage_JSQMessage.m */; };
-		BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */; };
-		BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */; };
 		BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF99FD1AF23D1600B7BD01 /* Robot.m */; };
 		BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A0E1AF246E200B7BD01 /* ConversationData.m */; };
 		BAEF9A161AF246E200B7BD01 /* MessageData.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF9A111AF246E200B7BD01 /* MessageData.m */; };
@@ -79,14 +75,6 @@
 		BA6BB5451AF10C6B002B6530 /* LocationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMessage.m; sourceTree = "<group>"; };
 		BA6BB5471AF10C76002B6530 /* ImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessage.h; sourceTree = "<group>"; };
 		BA6BB5481AF10C76002B6530 /* ImageMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessage.m; sourceTree = "<group>"; };
-		BA6BB54A1AF112A8002B6530 /* Message_JSQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message_JSQMessage.h; sourceTree = "<group>"; };
-		BA6BB54B1AF112A8002B6530 /* Message_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message_JSQMessage.m; sourceTree = "<group>"; };
-		BA6BB54D1AF11358002B6530 /* ImageMessage_JSQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageMessage_JSQMessage.h; sourceTree = "<group>"; };
-		BA6BB54E1AF11358002B6530 /* ImageMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageMessage_JSQMessage.m; sourceTree = "<group>"; };
-		BA6BB5501AF11491002B6530 /* LocationMessage_JSQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMessage_JSQMessage.h; sourceTree = "<group>"; };
-		BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMessage_JSQMessage.m; sourceTree = "<group>"; };
-		BA6BB5531AF11521002B6530 /* TextMessage_JSQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessage_JSQMessage.h; sourceTree = "<group>"; };
-		BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage_JSQMessage.m; sourceTree = "<group>"; };
 		BAEF99FC1AF23D1600B7BD01 /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
 		BAEF99FD1AF23D1600B7BD01 /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
 		BAEF9A0D1AF246E200B7BD01 /* ConversationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationData.h; sourceTree = "<group>"; };
@@ -273,8 +261,6 @@
 			children = (
 				BA6BB5471AF10C76002B6530 /* ImageMessage.h */,
 				BA6BB5481AF10C76002B6530 /* ImageMessage.m */,
-				BA6BB54D1AF11358002B6530 /* ImageMessage_JSQMessage.h */,
-				BA6BB54E1AF11358002B6530 /* ImageMessage_JSQMessage.m */,
 			);
 			path = ImageMessage;
 			sourceTree = "<group>";
@@ -284,8 +270,6 @@
 			children = (
 				BA6BB5441AF10C6B002B6530 /* LocationMessage.h */,
 				BA6BB5451AF10C6B002B6530 /* LocationMessage.m */,
-				BA6BB5501AF11491002B6530 /* LocationMessage_JSQMessage.h */,
-				BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */,
 			);
 			path = LocationMessage;
 			sourceTree = "<group>";
@@ -297,8 +281,6 @@
 				BA6BB5381AF0E2B4002B6530 /* Message.m */,
 				BA6BB53E1AF1014D002B6530 /* Message_MessageDataAccess.h */,
 				BA6BB53F1AF1014D002B6530 /* Message_MessageDataAccess.m */,
-				BA6BB54A1AF112A8002B6530 /* Message_JSQMessage.h */,
-				BA6BB54B1AF112A8002B6530 /* Message_JSQMessage.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -308,8 +290,6 @@
 			children = (
 				BA6BB5411AF10C63002B6530 /* TextMessage.h */,
 				BA6BB5421AF10C63002B6530 /* TextMessage.m */,
-				BA6BB5531AF11521002B6530 /* TextMessage_JSQMessage.h */,
-				BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */,
 			);
 			path = TextMessage;
 			sourceTree = "<group>";
@@ -502,10 +482,7 @@
 				BA6BB5401AF1014D002B6530 /* Message_MessageDataAccess.m in Sources */,
 				BA6BB53D1AF0FCA2002B6530 /* User_UserDataAccess.m in Sources */,
 				BA6BB5461AF10C6B002B6530 /* LocationMessage.m in Sources */,
-				BA6BB54C1AF112A8002B6530 /* Message_JSQMessage.m in Sources */,
 				BAEF9A151AF246E200B7BD01 /* ConversationData.m in Sources */,
-				BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */,
-				BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */,
 				BA6BB4E21AEFB77D002B6530 /* main.m in Sources */,
 				BA6BB5201AEFE33A002B6530 /* Conversation.m in Sources */,
 				BA6BB53A1AF0E2B4002B6530 /* Message.m in Sources */,
@@ -513,7 +490,6 @@
 				BAEF9A1A1AF24A4A00B7BD01 /* Conversation_ConversationDataAccess.m in Sources */,
 				BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */,
 				BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */,
-				BA6BB54F1AF11358002B6530 /* ImageMessage_JSQMessage.m in Sources */,
 				BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

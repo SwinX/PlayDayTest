@@ -8,6 +8,7 @@
 
 #import "TextMessage.h"
 #import "MessageData.h"
+#import "User.h"
 
 @implementation TextMessage
 
@@ -21,6 +22,16 @@
 
 -(NSString*)text {
     return _internals.messageText;
+}
+
+-(JSQMessage*)JSQMessage {
+    if (!_JSQMessage) {
+        _JSQMessage = [[JSQMessage alloc] initWithSenderId:self.user.uid
+                                  senderDisplayName:self.user.name
+                                               date:self.date
+                                               text:self.text];
+    }
+    return _JSQMessage;
 }
 
 @end

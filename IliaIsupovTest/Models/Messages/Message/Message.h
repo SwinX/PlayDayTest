@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <JSQMessagesViewController/JSQMessages.h>
 
 @class User;
 @class Conversation;
@@ -21,6 +22,7 @@ typedef enum _MessageType {
 
 @interface Message : NSObject {
     MessageData* _internals;
+    JSQMessage* _JSQMessage;
 }
 
 @property (nonatomic, readonly) NSString* uid;
@@ -30,6 +32,8 @@ typedef enum _MessageType {
 @property (nonatomic, readonly) NSString* conversationId;
 
 @property (nonatomic, readonly) User *user;
+
+@property (nonatomic, readonly) JSQMessage* JSQMessage;
 
 -(instancetype)init NS_DESIGNATED_INITIALIZER;
 -(instancetype)initWithMessageData:(MessageData*)data NS_DESIGNATED_INITIALIZER;
