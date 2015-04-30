@@ -30,6 +30,7 @@
 		BA6BB54F1AF11358002B6530 /* ImageMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB54E1AF11358002B6530 /* ImageMessage_JSQMessage.m */; };
 		BA6BB5521AF11491002B6530 /* LocationMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */; };
 		BA6BB5551AF11521002B6530 /* TextMessage_JSQMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */; };
+		BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF99FD1AF23D1600B7BD01 /* Robot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		BA6BB5511AF11491002B6530 /* LocationMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMessage_JSQMessage.m; sourceTree = "<group>"; };
 		BA6BB5531AF11521002B6530 /* TextMessage_JSQMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessage_JSQMessage.h; sourceTree = "<group>"; };
 		BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessage_JSQMessage.m; sourceTree = "<group>"; };
+		BAEF99FC1AF23D1600B7BD01 /* Robot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Robot.h; sourceTree = "<group>"; };
+		BAEF99FD1AF23D1600B7BD01 /* Robot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Robot.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,7 @@
 		BA6BB5061AEFD10A002B6530 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BAEF99FB1AF23D0500B7BD01 /* Robot */,
 				BA6BB5331AF0E2B4002B6530 /* Messages */,
 				BA6BB5241AF0DF5A002B6530 /* CoreData */,
 				BA6BB51D1AEFE31D002B6530 /* Conversation */,
@@ -317,6 +321,15 @@
 				BA6BB5541AF11521002B6530 /* TextMessage_JSQMessage.m */,
 			);
 			path = TextMessage;
+			sourceTree = "<group>";
+		};
+		BAEF99FB1AF23D0500B7BD01 /* Robot */ = {
+			isa = PBXGroup;
+			children = (
+				BAEF99FC1AF23D1600B7BD01 /* Robot.h */,
+				BAEF99FD1AF23D1600B7BD01 /* Robot.m */,
+			);
+			path = Robot;
 			sourceTree = "<group>";
 		};
 		D625569AA9619DE0B040C893 /* Pods */ = {
@@ -480,6 +493,7 @@
 				BA6BB5491AF10C76002B6530 /* ImageMessage.m in Sources */,
 				BA6BB5431AF10C63002B6530 /* TextMessage.m in Sources */,
 				BA6BB54F1AF11358002B6530 /* ImageMessage_JSQMessage.m in Sources */,
+				BAEF99FE1AF23D1600B7BD01 /* Robot.m in Sources */,
 				BA6BB5321AF0E125002B6530 /* UserData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

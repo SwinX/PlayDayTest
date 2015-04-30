@@ -34,8 +34,9 @@
 
 -(instancetype)initWithUsers:(NSArray *)users {
     if (self = [super init]) {
-        _users = users;
-        
+        _users = [NSArray arrayWithArray:users];
+        _messages = [NSMutableArray array];
+        _observers = [NSMutableArray array];
     }
     return self;
 }
