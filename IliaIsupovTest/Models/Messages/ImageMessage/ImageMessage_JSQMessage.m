@@ -14,10 +14,12 @@
 @implementation ImageMessage (JSQMessage)
 
 -(JSQMessage*)JSQMessage {
+    JSQPhotoMediaItem* mediaItem = [[JSQPhotoMediaItem alloc] initWithImage:self.image];
+    mediaItem.appliesMediaViewMaskAsOutgoing = [self.user isEqual:[User currentUser]];
     return [[JSQMessage alloc] initWithSenderId:self.user.uid
                               senderDisplayName:self.user.name
                                            date:self.date
-                                          media:[[JSQPhotoMediaItem alloc] initWithImage:self.image]];
+                                          media:mediaItem];
 }
 
 @end

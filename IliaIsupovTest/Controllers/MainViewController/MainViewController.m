@@ -128,10 +128,6 @@
 
 - (NSAttributedString *)collectionView:(JSQMessagesCollectionView *)collectionView attributedTextForMessageBubbleTopLabelAtIndexPath:(NSIndexPath *)indexPath {
     Message *message = [_conversation.messages objectAtIndex:indexPath.item];
-    
-    /**
-     *  iOS7-style sender name labels
-     */
     if ([message.user isEqual:[User currentUser]]) {
         return nil;
     }
@@ -142,10 +138,6 @@
             return nil;
         }
     }
-    
-    /**
-     *  Don't specify attributes to use the defaults.
-     */
     return [[NSAttributedString alloc] initWithString:message.user.name];
 }
 
@@ -184,11 +176,7 @@
 }
 
 - (CGFloat)collectionView:(JSQMessagesCollectionView *)collectionView
-                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForMessageBubbleTopLabelAtIndexPath:(NSIndexPath *)indexPath
-{
-    /**
-     *  iOS7-style sender name labels
-     */
+                   layout:(JSQMessagesCollectionViewFlowLayout *)collectionViewLayout heightForMessageBubbleTopLabelAtIndexPath:(NSIndexPath *)indexPath {
     Message* message = [_conversation.messages objectAtIndex:indexPath.row];
     if ([[User currentUser] isEqual:message.user]) {
         return 0.0f;

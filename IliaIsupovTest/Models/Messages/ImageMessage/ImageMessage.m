@@ -9,7 +9,9 @@
 #import "ImageMessage.h"
 #import "MessageData.h"
 
-@implementation ImageMessage
+@implementation ImageMessage {
+    UIImage* _image;
+}
 
 -(instancetype)initWithImage:(UIImage*)image user:(User*)user conversation:(Conversation *)conversation {
     if (self = [super initWithUser:user conversation:conversation]) {
@@ -20,7 +22,10 @@
 }
 
 -(UIImage*)image {
-    return [UIImage imageWithData:_internals.messageImage];
+    if (!_image) {
+        _image = [UIImage imageWithData:_internals.messageImage]; //for speed up. Memory needs to be optimized somehow there
+    }
+    return _image;
 }
 
 @end

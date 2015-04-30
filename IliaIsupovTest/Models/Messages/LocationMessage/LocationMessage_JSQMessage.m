@@ -14,10 +14,12 @@
 @implementation LocationMessage (JSQMessage)
 
 -(JSQMessage*)JSQMessage {
+    JSQLocationMediaItem* mediaItem = [[JSQLocationMediaItem alloc] initWithLocation:self.location];
+    mediaItem.appliesMediaViewMaskAsOutgoing = [self.user isEqual:[User currentUser]];
     return [[JSQMessage alloc] initWithSenderId:self.user.uid
-                              senderDisplayName:self.user.name
-                                           date:self.date
-                                          media:[[JSQLocationMediaItem alloc] initWithLocation:self.location]];
+                                             senderDisplayName:self.user.name
+                                                          date:self.date
+                                                         media:mediaItem];
 }
 
 @end
